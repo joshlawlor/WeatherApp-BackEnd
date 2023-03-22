@@ -14,7 +14,7 @@ const getWeather = (req,res) => {
     })
     .then(response => {
         console.log(response)
-        res.json(response.name)
+        res.json(response)
     })
     
 }
