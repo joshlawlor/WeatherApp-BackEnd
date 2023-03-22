@@ -3,7 +3,7 @@ const router = express.Router()
 const searchCtrl = require('../controllers/searchCtrl')
 
 
-router.get('/', searchCtrl.getWeather)
+router.post('/', searchCtrl.getWeather)
 
 
 

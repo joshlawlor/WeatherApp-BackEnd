@@ -1,8 +1,8 @@
 
 const getWeather = (req,res) => {
-    console.log('RAN')
+    console.log(req.body.city)
      fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=Albany&appid=3e0945e2cccf519756077442032e3083
+      `https://api.openweathermap.org/data/2.5/weather?q=${req.body.city}&appid=3e0945e2cccf519756077442032e3083
       `,
       {
         method: "GET",
@@ -13,7 +13,7 @@ const getWeather = (req,res) => {
             return response.json();
     })
     .then(response => {
-        console.log(response)
+        
         res.json(response)
     })
     
